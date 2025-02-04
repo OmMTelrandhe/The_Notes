@@ -81,6 +81,25 @@ npm run build
 
 The production-ready files will be in the `dist` directory.
 
+### Vercel Deployment
+
+When deploying on Vercel, a `vercel.json` configuration is included to handle client-side routing. This ensures that page refreshes work correctly for single-page applications (SPAs).
+
+Key configuration:
+- Redirects all routes to `index.html`
+- Allows client-side routing to work seamlessly
+
+#### Troubleshooting Vercel Deployment
+
+If you encounter 404 errors on page refresh:
+1. Ensure `vercel.json` is in the project root
+2. Verify that your build command is set to `npm run build`
+3. Set the output directory to `dist`
+
+In Vercel project settings:
+- Build Command: `npm run build`
+- Output Directory: `dist`
+
 ## Contributing
 
 1. Fork the repository
